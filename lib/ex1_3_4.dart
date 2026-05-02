@@ -6,14 +6,13 @@ class LastExercises extends StatefulWidget {
 }
 
 class _LastExercisesState extends State<LastExercises> {
-  // Exercice 1.3 : Les contrôleurs
-  final c1 = TextEditingController();
-  final c2 = TextEditingController();
+  final c1 = TextEditingController(); // Controller 1
+  final c2 = TextEditingController(); // Controller 2
   String resultat = "0";
 
   void calculer() {
     setState(() {
-      // Conversion avec parse
+      // Conversion avec parse (Ex 1.3)
       double n1 = double.tryParse(c1.text) ?? 0;
       double n2 = double.tryParse(c2.text) ?? 0;
       resultat = (n1 + n2).toString();
@@ -28,7 +27,7 @@ class _LastExercisesState extends State<LastExercises> {
         padding: EdgeInsets.all(20),
         child: Column(
           children: [
-            // Exercice 1.4 : Décoration (Border, Label, Icon)
+            // Décoration avec border, label et icon (Ex 1.4)
             TextField(
               controller: c1,
               decoration: InputDecoration(
