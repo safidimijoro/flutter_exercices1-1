@@ -1,28 +1,40 @@
 # Exercices Flutter - Niveau L3
 
-Ce dépôt contient les solutions pour les exercices de développement mobile.
+Ce dépôt contient les solutions pour les exercices de développement mobile réalisés dans le cadre du niveau L3.
 
 ## Exercice 1.1 : Centrage d'un TextField
 L'objectif était de centrer un champ de texte dans un conteneur.
-*   **Méthode Center** : Simple et efficace pour un centrage automatique.
-*   **Méthode Align** : Plus flexible pour positionner l'élément précisément.
+*   **Méthode Center** : Utilisation du widget `Center` pour un alignement automatique au milieu de l'écran.
+*   **Méthode Align** : Utilisation du widget `Align` avec la propriété `Alignment.center` pour plus de précision.
 
 ## Exercice 1.2 : Compteur de caractères
-L'objectif était d'ajouter un compteur à la propriété `counterText`.
+L'objectif était d'afficher le nombre de caractères saisis dans un `TextField`.
+*   **Méthode Automatique** : Utilisation de `maxLength` pour laisser Flutter gérer le compteur.
+*   **Méthode Personnalisée** : Utilisation de la propriété `counterText` combinée avec `onChanged` pour un message dynamique.
 
-### Méthodes présentées :
-1.  **Méthode Automatique (maxLength)** : 
-    *   *Argument* : Flutter gère tout (calcul et affichage). C'est la méthode la plus sûre pour limiter la saisie.
-2.  **Méthode Personnalisée (counterText)** : 
-    *   *Argument* : Utilise `onChanged` pour mettre à jour une variable. Cela permet de personnaliser le message (ex: "X lettres saisies") sans forcément bloquer l'utilisateur.
+## Exercice 1.3 : Addition avec Controllers et Parse
+L'objectif était de réaliser un calcul mathématique simple à partir de deux saisies utilisateur.
+*   **TextEditingController** : Utilisé pour extraire les valeurs textuelles des champs de saisie.
+*   **Méthode double.parse()** : Indispensable pour convertir les chaînes de caractères (`String`) en nombres (`double`) afin de permettre l'addition.
 
-## Structure des fichiers
-*   `main.dart` : Menu principal.
-*   `ex1_1_center.dart` & `ex1_1_align.dart` : Solutions du premier exercice.
-*   `ex1_2_counter.dart` : Solution du deuxième exercice.
+## Exercice 1.4 : Décoration TextField
+L'objectif était de personnaliser l'apparence des champs pour une meilleure expérience utilisateur.
+*   **InputDecoration** : 
+    *   `labelText` : Pour ajouter un titre flottant.
+    *   `border` : Utilisation de `OutlineInputBorder` pour un contour complet.
+    *   `prefixIcon` : Ajout d'icônes visuelles pour identifier les champs.
 
-## Installation
-```bash
-git clone [https://github.com/safidimijoro/flutter_exercices1_1.git](https://github.com/safidimijoro/flutter_exercices1_1.git)
-cd flutter_exercices1_1
-flutter run
+---
+
+## Structure des fichiers du projet
+*   `lib/main.dart` : Point d'entrée avec le menu de navigation.
+*   `lib/ex1_1_center.dart` : Démonstration du centrage.
+*   `lib/ex1_2_counter.dart` : Démonstration du compteur de caractères.
+*   `lib/ex1_3_4.dart` : Interface combinant l'addition (1.3) et la décoration (1.4).
+
+---
+
+## Installation et Lancement
+1. **Cloner le projet** :
+   ```bash
+   git clone [https://github.com/safidimijoro/flutter_exercices1-1.git](https://github.com/safidimijoro/flutter_exercices1-1.git)
