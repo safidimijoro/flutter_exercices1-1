@@ -1,39 +1,50 @@
 import 'package:flutter/material.dart';
-// Importation des fichiers contenant les deux méthodes
 import 'ex1_1_center.dart';
 import 'ex1_1_align.dart';
+import 'ex1_2_counter.dart';
 
-void main() => runApp(
-  MaterialApp(
-    home: MyApp(),
-    debugShowCheckedModeBanner: false, // Enlève la bannière "Debug"
-  ),
-);
+void main() =>
+    runApp(MaterialApp(home: MyApp(), debugShowCheckedModeBanner: false));
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Exercice 1.1 - Centrage")),
+      appBar: AppBar(title: Text("Menu des Exercices")),
       body: Center(
         child: Column(
-          // Centre les boutons verticalement dans la colonne
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // Bouton Exercice 1.1 - Méthode Center
             ElevatedButton(
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) => CenterMethod()),
               ),
-              child: Text("Voir la Méthode Center"),
+              child: Text("1.1 - Méthode Center"),
             ),
-            SizedBox(height: 20), // Espace entre les deux boutons
+            SizedBox(height: 15),
+
+            // Bouton Exercice 1.1 - Méthode Align
             ElevatedButton(
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) => AlignMethod()),
               ),
-              child: Text("Voir la Méthode Align"),
+              child: Text("1.1 - Méthode Align"),
+            ),
+            SizedBox(height: 15),
+
+            // Bouton Exercice 1.2 - Compteur
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange[100],
+              ),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => CounterExercise()),
+              ),
+              child: Text("1.2 - Compteur de caractères"),
             ),
           ],
         ),

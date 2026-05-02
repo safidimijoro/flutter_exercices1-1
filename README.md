@@ -1,42 +1,28 @@
-# Exercice 1.1 : Centrage d'un champ de texte (TextField) dans Flutter
+# Exercices Flutter - Niveau L3
 
-Ce projet a été réalisé dans le cadre de ma formation en développement d'applications mobiles (Niveau L3). L'objectif est de présenter et d'argumenter deux méthodes différentes pour centrer un widget `TextField` à l'intérieur d'un conteneur (`Container`).
+Ce dépôt contient les solutions pour les exercices de développement mobile.
 
-## Structure du Projet
+## Exercice 1.1 : Centrage d'un TextField
+L'objectif était de centrer un champ de texte dans un conteneur.
+*   **Méthode Center** : Simple et efficace pour un centrage automatique.
+*   **Méthode Align** : Plus flexible pour positionner l'élément précisément.
 
-Le projet est organisé en trois fichiers principaux pour une meilleure clarté :
-*   **main.dart** : Point d'entrée de l'application contenant le menu de navigation.
-*   **ex1_1_center.dart** : Implémentation de la première méthode utilisant le widget `Center`.
-*   **ex1_1_align.dart** : Implémentation de la seconde méthode utilisant le widget `Align`.
+## Exercice 1.2 : Compteur de caractères
+L'objectif était d'ajouter un compteur à la propriété `counterText`.
 
-## Méthodes de Centrage Présentées
+### Méthodes présentées :
+1.  **Méthode Automatique (maxLength)** : 
+    *   *Argument* : Flutter gère tout (calcul et affichage). C'est la méthode la plus sûre pour limiter la saisie.
+2.  **Méthode Personnalisée (counterText)** : 
+    *   *Argument* : Utilise `onChanged` pour mettre à jour une variable. Cela permet de personnaliser le message (ex: "X lettres saisies") sans forcément bloquer l'utilisateur.
 
-### 1. La Méthode "Center"
-Cette méthode utilise le widget `Center`, qui est un composant spécialisé pour placer son enfant au milieu exact de l'espace disponible.
-*   **Argument** : C'est la solution la plus simple et la plus lisible pour un centrage parfait (horizontal et vertical) sans configuration complexe.
-*   **Utilisation** : Idéal pour les interfaces simples où l'élément doit être au milieu de l'écran ou d'un parent.
+## Structure des fichiers
+*   `main.dart` : Menu principal.
+*   `ex1_1_center.dart` & `ex1_1_align.dart` : Solutions du premier exercice.
+*   `ex1_2_counter.dart` : Solution du deuxième exercice.
 
-### 2. La Méthode "Align"
-Cette méthode utilise le widget `Align` avec la propriété `alignment: Alignment.center`.
-*   **Argument** : Cette approche est beaucoup plus flexible. Elle permet non seulement de centrer, mais aussi de déplacer l'élément précisément (par exemple : `Alignment.topCenter` ou `Alignment(0.0, -0.5)`).
-*   **Utilisation** : Recommandé lorsque le positionnement doit être ajusté ou animé dynamiquement.
-
-## Installation et Exécution
-
-1.  **Prérequis** : Avoir Flutter et le SDK Dart installés sur votre machine.
-2.  **Clonage** : 
-    ```bash
-    git clone [https://github.com/safidimijoro/flutter_exercices.git](https://github.com/safidimijiro/flutter_exercices.git)
-    ```
-3.  **Lancement** :
-    ```bash
-    cd flutter_exercices
-    flutter run
-    ```
-
-## Environnement de Développement
-*   **IDE** : IntelliJ IDEA / VS Code
-*   **Framework** : Flutter 3.x
-*   **Chemin du projet** : `C:\ProjetFlutter\flutter_exercices` (optimisé pour éviter les erreurs de chemin Windows).
-
----
+## Installation
+```bash
+git clone [https://github.com/safidimijoro/flutter_exercices1_1.git](https://github.com/safidimijoro/flutter_exercices1_1.git)
+cd flutter_exercices1_1
+flutter run
